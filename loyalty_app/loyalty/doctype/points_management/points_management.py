@@ -12,7 +12,7 @@ class PointsManagement(Document):
 			self.validate_duplication()
 	
 	def validate_duplication(self):
-		enrollment = frappe.get_list("Reward Points", fields=["customer", "remaining_points", "total_points","name"])
+		enrollment = frappe.get_list("Reward Points History", fields=["customer", "remaining_points", "total_points","name"])
 		match = "true"
 		for x in enrollment:
 			if x.customer == self.customer:
@@ -29,11 +29,11 @@ class PointsManagement(Document):
 
 
 def update_rewardpoint(lead,points,remaining_points):
-	frappe.db.set_value("Reward Points", lead, "total_points", points)
-	frappe.db.set_value("Reward Points", lead, "remaining_points", remaining_points)
+	frappe.db.set_value("Reward Points History", lead, "total_points", points)
+	frappe.db.set_value("Reward Points History", lead, "remaining_points", remaining_points)
 
 def create_reward(self):
-	fees = frappe.new_doc("Reward Points")
+	fees = frappe.new_doc("Reward Points History")
 	fees.update({
 		"customer": self.customer,
 		"customername": self.customername,

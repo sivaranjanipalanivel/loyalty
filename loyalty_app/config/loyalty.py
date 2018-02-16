@@ -30,23 +30,54 @@ def get_data():
 				},
 				{
 					"type": "doctype",
-					"name": "Reward Points"
+					"name": "Reward Points History"
+				},
+				{
+					"type": "doctype",
+					"name": "Bonus Points History"
+				},
+				{
+					"type": "doctype",
+					"name": "Customer Enquiry"
 				}
 
 			]
 		},
 		{
-			"label": _("Orders"),
+			"label": _("Distributors"),
 			"items": [
 				{
 					"type": "doctype",
-					"name": "Points Management"
+					"name": "Distributors"
+				}
+
+			]
+		},
+		{
+			"label": _("Reward/Redeem Points"),
+			"items": [
+				{
+					"type": "doctype",
+					"name": "Reward Point"
 				},
 				{
 					"type": "doctype",
-					"name": "Orders"
+					"name": "Bonus Points"
 				}
 
+			]
+		},
+		{
+			"label": _("Sales/Orders"),
+			"items": [
+			{
+					"type": "doctype",
+					"name": "Sales"
+				},
+				{
+					"type": "doctype",
+					"name": "Redeem Orders"
+				}
 			]
 		},
 		{

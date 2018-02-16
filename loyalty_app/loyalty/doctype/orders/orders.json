@@ -393,7 +393,7 @@
    "label": "Amended From", 
    "length": 0, 
    "no_copy": 1, 
-   "options": "Orders", 
+   "options": "Redeem Orders", 
    "permlevel": 0, 
    "print_hide": 1, 
    "print_hide_if_no_value": 0, 
@@ -419,7 +419,7 @@
  "modified": "2018-02-14 11:56:35.436118", 
  "modified_by": "Administrator", 
  "module": "Loyalty", 
- "name": "Orders", 
+ "name": "Redeem Orders", 
  "name_case": "", 
  "owner": "Administrator", 
  "permissions": [

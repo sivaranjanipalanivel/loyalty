@@ -1,7 +1,7 @@
 // Copyright (c) 2018, Loyalty and contributors
 // For license information, please see license.txt
 
-frappe.ui.form.on('Orders', {
+frappe.ui.form.on('Redeem Orders', {
 	refresh: function(frm) {
 
 	}

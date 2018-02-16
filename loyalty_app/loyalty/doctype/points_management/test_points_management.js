@@ -2,7 +2,7 @@
 // rename this file from _test_[name] to test_[name] to activate
 // and remove above this line
 
-QUnit.test("test: Points Management", function (assert) {
+QUnit.test("test: Reward Point", function (assert) {
 	let done = assert.async();
 
 	// number of asserts
@@ -10,7 +10,7 @@ QUnit.test("test: Points Management", function (assert) {
 
 	frappe.run_serially([
 		// insert a new Points Management
-		() => frappe.tests.make('Points Management', [
+		() => frappe.tests.make('Reward Point', [
 			// values to be set
 			{key: 'value'}
 		]),
