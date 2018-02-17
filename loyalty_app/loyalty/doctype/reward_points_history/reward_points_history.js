@@ -33,5 +33,14 @@ frappe.ui.form.on('Reward Points History', {
 				}
 			});
 			$('.grid-buttons').parent().hide();
+			
 	},
+});
+
+frappe.ui.form.on("Reward List", "form_render", function(frm, cdt, cdn){
+
+	$('.grid-insert-row-below').hide();
+	$('.grid-insert-row').hide();
+	$('.grid-delete-row').hide();
+	$('.grid-append-row').hide();
 });

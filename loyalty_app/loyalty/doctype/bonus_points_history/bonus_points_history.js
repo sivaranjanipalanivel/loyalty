@@ -34,3 +34,11 @@ frappe.ui.form.on('Bonus Points History', {
 			$('.grid-buttons').parent().hide();
 	},
 });
+frappe.ui.form.on("Bonus List", "form_render", function(frm, cdt, cdn){
+
+	$('.grid-insert-row-below').hide();
+	$('.grid-insert-row').hide();
+	$('.grid-delete-row').hide();
+	$('.grid-append-row').hide();
+});
+
