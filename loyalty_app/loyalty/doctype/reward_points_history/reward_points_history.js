@@ -6,13 +6,13 @@ frappe.ui.form.on('Reward Points History', {
 
 	},
 	onload: function(frm){
-		console.log(frm.doc.customer)
+		console.log(frm.doc.staff)
 		cur_frm.disable_save();
 			frappe.call({
 				method: "frappe.client.get_list",
 				args: {
 					doctype: "Reward Point",
-					filters: [["customer", "=", frm.doc.customer]],
+					filters: [["staff", "=", frm.doc.staff]],
 					fields: ["productid","qr_code","productname","points","status","creation"],
 					limit_page_length: null
 				},

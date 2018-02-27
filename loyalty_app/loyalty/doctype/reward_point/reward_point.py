@@ -14,10 +14,10 @@ class RewardPoint(Document):
 			self.Delete_reward()
 	
 	def validate_duplication(self):
-		enrollment = frappe.get_list("Reward Points History", fields=["customer", "remaining_points", "total_points","name"])
+		enrollment = frappe.get_list("Reward Points History", fields=["staff", "remaining_points", "total_points","name"])
 		match = "true"
 		for x in enrollment:
-			if x.customer == self.customer:
+			if x.staff == self.staff:
 				total_points = int(x.total_points) + int(self.points)
 				remaining_points = int(x.remaining_points) + int(self.points)
 				update_rewardpoint(x.name,total_points,remaining_points)
@@ -27,10 +27,10 @@ class RewardPoint(Document):
 			create_reward(self)
 
 	def Delete_reward(self):
-		enrollment = frappe.get_list("Reward Points History", fields=["customer", "remaining_points", "total_points","name"])
+		enrollment = frappe.get_list("Reward Points History", fields=["staff", "remaining_points", "total_points","name"])
 		match = "true"
 		for x in enrollment:
-			if x.customer == self.customer:
+			if x.staff == self.staff:
 				total_points = int(x.total_points) - int(self.points)
 				remaining_points = int(x.remaining_points) - int(self.points)
 				update_rewardpoint(x.name,total_points,remaining_points)
@@ -43,8 +43,8 @@ def update_rewardpoint(lead,points,remaining_points):
 def create_reward(self):
 	fees = frappe.new_doc("Reward Points History")
 	fees.update({
-		"customer": self.customer,
-		"customername": self.customername,
+		"staff": self.staff,
+		"staff_name": self.staff_name,
 		"total_points": self.points,
 		"remaining_points": self.points,
 		"redeemed_points": 0

@@ -6,7 +6,7 @@ frappe.ui.form.on('Reward Point', {
 
 	},
 	onload: function(frm){
-		console.log(frm.doc.customer)
+		console.log(frm.doc.staff)
 		if(frm.doc.status === "Approved" || frm.doc.status === "Rejected"){
 			cur_frm.disable_save();
 		}

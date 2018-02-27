@@ -17,6 +17,14 @@ def get_data():
 				{
 					"type": "doctype",
 					"name": "Coupons"
+				},
+				{
+					"type": "doctype",
+					"name": "Scholarship Range"
+				},
+				{
+					"type": "doctype",
+					"name": "Scholarship"
 				}
 
 			]
@@ -24,10 +32,6 @@ def get_data():
 		{
 			"label": _("Customers"),
 			"items": [
-				{
-					"type": "doctype",
-					"name": "Customers"
-				},
 				{
 					"type": "doctype",
 					"name": "Reward Points History"
@@ -48,7 +52,15 @@ def get_data():
 			"items": [
 				{
 					"type": "doctype",
-					"name": "Distributors"
+					"name": "Agents"
+				},
+				{
+					"type": "doctype",
+					"name": "Staff"
+				},
+				{
+					"type": "doctype",
+					"name": "Student"
 				}
 
 			]
@@ -63,8 +75,11 @@ def get_data():
 				{
 					"type": "doctype",
 					"name": "Bonus Points"
-				}
-
+				},
+				{
+					"type": "doctype",
+					"name": "Student Scholarship"
+				},
 			]
 		},
 		{
@@ -86,8 +101,11 @@ def get_data():
 				{
 					"type": "doctype",
 					"name": "Sliders"
+				},
+                {
+					"type": "doctype",
+					"name": "Advertisement"
 				}
-
 			]
 		},
 		{

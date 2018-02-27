@@ -5,12 +5,6 @@
 from __future__ import unicode_literals
 import frappe
 from frappe.model.document import Document
-from frappe.utils import getdate, validate_email_add
 
-class Distributors(Document):
-	def validate(self):
-		self.validate_email()
-
-	def validate_email(self):
-		if self.emailid:
-			validate_email_add(self.emailid, True)
+class Offers(Document):
+	pass
